@@ -180,3 +180,23 @@ nav {
     transform: translateY(0px);
   }
 }
+
+.likeButton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.like {
+  height: 50px;
+}
+
+.like:hover {
+  cursor: pointer;
+}
+
+.count {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

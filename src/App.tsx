@@ -1,4 +1,5 @@
 import ScrollToTop from './ScrollToTop';
+import React, { useState } from "react";
 
 function App() {
   return (
@@ -39,17 +40,22 @@ function App() {
       <br></br>
       Below I have included my LinkedIn. That has my resume and with it various other ways to contact me.
       I hope to hear from you soon! Doesn't have to be profession wise, I am willing to talk about anything.
+      ALSO SMASH THAT LIKE BUTTON. I can't see how many do it, but it makes me happy some will :D
       </h2>
       <a href="https://www.linkedin.com/in/vibhas-ramani-060207295/">
       <img className= "linkedIn"src="https://cdn-icons-png.flaticon.com/512/61/61109.png"></img>
       </a>
+      <br></br>
+      <LikeButton />
     </div>
     </>
   );
+  
 }
+
 function NavBar() {
   return (
-    <nav className="bar">
+    <nav>
       <div>
         <h1 className="logo">Portfolio</h1>
       </div>
@@ -71,7 +77,27 @@ function NavBar() {
         </li>
       </ul>
     </nav>
+    
   );
+}
+
+function LikeButton() {
+  const [click, setClick] = useState(0)
+
+  function HandleClick() {
+    setClick(click + 1)
+  }
+  return (
+  <>
+  <button className='likeButton' onClick={HandleClick}>
+    <img className='like' src="https://cdn.freebiesupply.com/logos/large/2x/like-button-facebook-logo-png-transparent.png" alt="" />
+  </button>
+  <br></br>
+  <button className='count'>
+    {click}
+  </button>
+  </>
+  )
 }
 
 export default App
