@@ -1,16 +1,63 @@
 import ScrollToTop from './ScrollToTop';
 import React, { useState } from "react";
 import Toggle from "react-toggle";
+import "react-toggle/style.css"
 
 
-function App(dark) {
+function NavBar({darkMode}:{darkMode: boolean} ) {
   return (
+    <nav className={darkMode? 'nav-dark': 'nav-light'}>
+      <div>
+        <h1 className="logo">Portfolio</h1>
+      </div>
+      <ul className="nav-links">
+        <li>
+          <a href = "#base">
+          Home
+          </a>
+        </li>
+        <li className="aboutLink">
+          <a href = "#aboutme">
+          About
+          </a>
+        </li>
+        <li>
+          <a href="#concl">
+          Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
     
+  );
+}
+
+
+function App() {
+  const [dark, setDark] = useState(false)
+
+
+  function handleDark(){
+    setDark(!dark)
+  }
+
+  return (
     <>
-    const [dark, setDark] = useState(false)
-    <NavBar />
-    <DarkMode />
-    <ScrollToTop />
+    
+    <NavBar darkMode={dark}/>
+  
+          
+          <Toggle
+          onClick={handleDark}
+          checked={dark}
+          onChange={({ target }) => setDark(target.checked)}
+          icons={{ checked: "🌙", unchecked: "🔆" }}
+          aria-label="Dark mode toggle"
+          />
+        
+    
+    <ScrollToTop/>
+
     <div id = "base">
       <h1 className={dark ? "dark-welcome" : "welcome"}>
         <span>WELCOME TO MY PORTFOLIO</span>
@@ -53,54 +100,9 @@ function App(dark) {
     </>
   );
   
-  function DarkMode() {
 
-  function handleDark(){
-      setDark(!dark)
-  }
+}
 
-  return (
-      <div >
-         
-          <Toggle
-          onClick={handleDark}
-          checked={dark}
-          onChange={({ target }) => setDark(target.checked)}
-          icons={{ checked: "🌙", unchecked: "🔆" }}
-          aria-label="Dark mode toggle"
-          />
-        
-      </div>
-  )
-}
-}
-function NavBar() {
-  return (
-    <nav>
-      <div>
-        <h1 className="logo">Portfolio</h1>
-      </div>
-      <ul className="nav-links">
-        <li>
-          <a href = "#base">
-          Home
-          </a>
-        </li>
-        <li className="aboutLink">
-          <a href = "#aboutme">
-          About
-          </a>
-        </li>
-        <li>
-          <a href="#concl">
-          Contact
-          </a>
-        </li>
-      </ul>
-    </nav>
-    
-  );
-}
 
 
 export default App
