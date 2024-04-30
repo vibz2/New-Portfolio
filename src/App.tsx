@@ -1,18 +1,14 @@
 import ScrollToTop from './ScrollToTop';
 import React, { useState } from "react";
-import Toggle from "react-toggle";
+import axios from "axios";
 
-
-function App(dark) {
+function App() {
   return (
-    
     <>
-    const [dark, setDark] = useState(false)
     <NavBar />
-    <DarkMode />
     <ScrollToTop />
     <div id = "base">
-      <h1 className={dark ? "dark-welcome" : "welcome"}>
+      <h1 className="welcome">
         <span>WELCOME TO MY PORTFOLIO</span>
       </h1>
     <img className="pfp" src="https://media.licdn.com/dms/image/D5603AQGa_aOwjW3t8w/profile-displayphoto-shrink_400_400/0/1696898614854?e=1717632000&v=beta&t=29zwAiFmjCLgPcKt9hmzGWsTMrXNva6GKRWYAGr1MMM" alt="Picture of Vibhas Ramani"></img>    
@@ -45,35 +41,19 @@ function App(dark) {
       <br></br>
       Below I have included my LinkedIn. That has my resume and with it various other ways to contact me.
       I hope to hear from you soon! Doesn't have to be profession wise, I am willing to talk about anything.
+      ALSO SMASH THAT LIKE BUTTON. I can't see how many do it, but it makes me happy some will :D
       </h2>
       <a href="https://www.linkedin.com/in/vibhas-ramani-060207295/">
       <img className= "linkedIn"src="https://cdn-icons-png.flaticon.com/512/61/61109.png"></img>
       </a>
+      <br></br>
+      <LikeButton />
     </div>
     </>
   );
   
-  function DarkMode() {
-
-  function handleDark(){
-      setDark(!dark)
-  }
-
-  return (
-      <div >
-         
-          <Toggle
-          onClick={handleDark}
-          checked={dark}
-          onChange={({ target }) => setDark(target.checked)}
-          icons={{ checked: "🌙", unchecked: "🔆" }}
-          aria-label="Dark mode toggle"
-          />
-        
-      </div>
-  )
 }
-}
+
 function NavBar() {
   return (
     <nav>
@@ -102,5 +82,30 @@ function NavBar() {
   );
 }
 
+function LikeButton() {
+  const [click, setClick] = useState(0)
+
+  function HandleClick() {
+    setClick(click + 1)
+    axios.post("http://localhost:8000/add")
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      })
+  }
+  return (
+  <>
+  <button className='likeButton' onClick={HandleClick}>
+    <img className='like' src="https://cdn.freebiesupply.com/logos/large/2x/like-button-facebook-logo-png-transparent.png" alt="" />
+  </button>
+  <br></br>
+  <button className='count'>
+    {click}
+  </button>
+  </>
+  )
+}
 
 export default App
