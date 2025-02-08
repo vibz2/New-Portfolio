@@ -11,7 +11,7 @@ function App() {
       <h1 className="welcome">
         <span>WELCOME TO MY PORTFOLIO</span>
       </h1>
-    <img className="pfp" src="https://media.licdn.com/dms/image/D5603AQGa_aOwjW3t8w/profile-displayphoto-shrink_400_400/0/1696898614854?e=1717632000&v=beta&t=29zwAiFmjCLgPcKt9hmzGWsTMrXNva6GKRWYAGr1MMM" alt="Picture of Vibhas Ramani"></img>    
+    <img className="pfp" src="/html pfp.jpg"></img>    
     </div>
     <div id = "aboutme">
     <h2 className="aboutMe">
@@ -22,7 +22,7 @@ function App() {
         of Maryland USA. As a kid I always had big dreams to help others and solve issues which were going 
         around the world. As a result, my CS journey began with a book of inventions which I keep to this
         day. These inventions were first realized with a World Robotics Olympiad in Jamaica. I was attending
-        Hillel Academy at the time and we placed second. It was exilirating. The thrill I got from participating
+        Hillel Academy at the time and we placed second. It was exhilirating. The thrill I got from participating
         in the competition, made me realize that this was what I wanted to do, and further cemented my path
         to becoming a computer science student. Subsequently I ended up joining the computer science club at
         my school and then finally pursuing a degree of computer science in the University of Maryland.
@@ -41,7 +41,6 @@ function App() {
       <br></br>
       Below I have included my LinkedIn. That has my resume and with it various other ways to contact me.
       I hope to hear from you soon! Doesn't have to be profession wise, I am willing to talk about anything.
-      ALSO SMASH THAT LIKE BUTTON. I can't see how many do it, but it makes me happy some will :D
       </h2>
       <a href="https://www.linkedin.com/in/vibhas-ramani-060207295/">
       <img className= "linkedIn"src="https://cdn-icons-png.flaticon.com/512/61/61109.png"></img>
@@ -74,6 +73,11 @@ function NavBar() {
         <li>
           <a href="#concl">
           Contact
+          </a>
+        </li>
+        <li>
+          <a>
+            Projects
           </a>
         </li>
       </ul>

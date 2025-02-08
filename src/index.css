@@ -50,6 +50,7 @@ nav {
   align-items: center;
   text-decoration: none;
   list-style: none;
+  font-size: 2.5vh;
 }
 
 .nav-links li:hover {
