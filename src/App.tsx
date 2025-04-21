@@ -1,6 +1,9 @@
 import ScrollToTop from './ScrollToTop';
 import { useState } from "react";
 import axios from "axios";
+import pfpImage from './assets/pfp.jpg';
+import linkedInImage from './assets/linkedIn.png';
+import likeImage from './assets/like-button-facebook-logo-png-transparent.png';
 
 function App() {
   return (
@@ -11,7 +14,7 @@ function App() {
       <h1 className="welcome">
         <span>WELCOME TO MY PORTFOLIO</span>
       </h1>
-    <img className="pfp" src="/html pfp.jpg"></img>    
+    <img className="pfp" src={pfpImage} alt="Profile picture"></img>    
     </div>
     <div id = "aboutme">
     <h2 className="aboutMe">
@@ -43,7 +46,7 @@ function App() {
       I hope to hear from you soon! Doesn't have to be profession wise, I am willing to talk about anything.
       </h2>
       <a href="https://www.linkedin.com/in/vibhas-ramani-060207295/">
-      <img className= "linkedIn"src="https://cdn-icons-png.flaticon.com/512/61/61109.png"></img>
+      <img className= "linkedIn"src={linkedInImage}></img>
       </a>
       <br></br>
       <LikeButton />
@@ -102,7 +105,7 @@ function LikeButton() {
   return (
   <>
   <button className='likeButton' onClick={HandleClick}>
-    <img className='like' src="https://cdn.freebiesupply.com/logos/large/2x/like-button-facebook-logo-png-transparent.png" alt="" />
+    <img className='like' src={likeImage} alt="" />
   </button>
   <br></br>
   <button className='count'>
