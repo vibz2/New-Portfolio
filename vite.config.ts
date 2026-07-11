@@ -16,7 +16,7 @@ export default defineConfig({
   plugins: [react()],
   // Relative base so the build works when hosted at
   // https://<username>.github.io/<repo-name>/ (any repo name, no config needed).
-  base: "./",
+  base: "/New-Portfolio/",
   define: {
     __LAST_UPDATED__: JSON.stringify(getLastCommitDate()),
   },
