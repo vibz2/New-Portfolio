@@ -3,19 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 type Track = "swe" | "ml";
 
-// ============================================================
-// EDIT ME — add your resume PDFs.
-// 1. Drop your two resume files into the /public folder using
-//    these exact names (or update the paths below to match
-//    whatever you name them):
-//      public/resume-swe.pdf   <- general Software Engineering resume
-//      public/resume-ml.pdf    <- Machine Learning-focused resume
-// 2. The buttons below will then download/open the right file
-//    depending on which tab is selected.
-// ============================================================
 const resumeFiles: Record<Track, string> = {
-  swe: "public/Vibhas_Ramani_Resume.pdf",
-  ml: "public/Vibhas_Ramani_Resume_AI.pdf",
+  swe: "Vibhas_Ramani_Resume.pdf",
+  ml: "Vibhas_Ramani_Resume_AI.pdf",
 };
 
 const highlights: Record<Track, { title: string; points: string[] }[]> = {

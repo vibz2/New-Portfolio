@@ -10,21 +10,13 @@ export default function Home() {
       <section className="hero">
         <div className="hero-sky" aria-hidden="true" />
         <div className="hero-stage">
-          {/* ============================================================
-              EDIT ME — swap in your real photo.
-              1. Drop your photo file into the /public folder, e.g. as
-                 "public/profile-photo.png" (a square or portrait crop
-                 with a transparent or plain background works best).
-              2. Change the src below from "/profile-placeholder.svg"
-                 to "/profile-photo.png" (both places it appears).
-             ============================================================ */}
           <motion.div
             className="sun-photo"
             initial={{ y: 130, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 3, ease: tide }}
           >
-            <img src="public/pfp.jpg" alt="Vibhas Ramani" />
+            <img src="pfp.jpg" alt="Vibhas Ramani" />
           </motion.div>
           <div className="horizon-line" aria-hidden="true" />
           <motion.div
