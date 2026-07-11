@@ -620,6 +620,10 @@
   transition: border-color 0.3s var(--ease-tide);
 }
 
+.project-card:hover {
+  border-left-width: 6px;
+}
+
 .project-card:nth-child(3n + 2) {
   border-left-color: var(--sun-gold);
 }
