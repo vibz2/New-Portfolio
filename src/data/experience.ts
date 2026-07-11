@@ -20,7 +20,7 @@ export const experience: Employer[] = [
     name: "NSF I-Corps Hub Mid-Atlantic Region",
     dates: "Jun 2026 – Present",
     location: "Hybrid",
-    tags: ["FastAPI", "SQLAlchemy", "Redis", "AWS S3"],
+    tags: ["Python", "SQL", "FastAPI", "Alembic", "SQLAlchemy", "Docker", "AWS S3"],
     roles: [
       {
         title: "Back End Developer",
@@ -41,7 +41,7 @@ export const experience: Employer[] = [
     name: "Hardware & Lumber Limited",
     dates: "Jun 2025 – Aug 2025",
     location: "Internship",
-    tags: ["Python", "SQL", "VBA", "Automation"],
+    tags: ["Python", "SQL", "Javascript", "Google Apps Script", "IBM DB2", "IBM iSeries", "Inno Setup"],
     roles: [
       {
         title: "Software Engineer",
@@ -62,8 +62,7 @@ export const experience: Employer[] = [
     id: "childrensnational",
     name: "Children's National Hospital",
     dates: "Sep 2024 – May 2025",
-    location: "9 mos",
-    tags: ["FastAPI", "React", "Supabase"],
+    tags: ["Python", "FastAPI", "React.tsx", "Supabase", "CSS", "Tailwind CSS", "SASS"],
     roles: [
       {
         title: "Full Stack Engineer",
@@ -90,7 +89,7 @@ export const experience: Employer[] = [
     id: "appdevclub",
     name: "App Development Club",
     dates: "Jan 2024 – May 2024",
-    tags: ["React", "MongoDB", "CSS"],
+    tags: ["Python", "React.js", "Javascript", "MongoDB", "CSS"],
     roles: [
       {
         title: "Bootcamp Member",
