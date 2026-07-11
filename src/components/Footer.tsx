@@ -20,6 +20,12 @@ export default function Footer() {
         <span className="site-footer-sep" aria-hidden="true">
           ·
         </span>
+        <a href={contact.linkedin} target="_blank" rel="noreferrer">
+          LinkedIn
+        </a>
+        <span className="site-footer-sep" aria-hidden="true">
+          ·
+        </span>
         <span>Last updated {formatLastUpdated(lastUpdated)}</span>
       </div>
     </footer>
